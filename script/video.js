@@ -25,7 +25,7 @@ fetch(`https://openapi.programming-hero.com/api/phero-tube/category/${id}`)
 const displayFunction = (data) =>{
     const categoryContainer = document.getElementById('categories')
     data.forEach((item) => {
-        console.log(item)
+       
 
         const buttonContainer = document.createElement("div")
         buttonContainer.innerHTML =`
@@ -58,7 +58,7 @@ const loadDetails = async(videoId) =>{
  displayDetails(data.video);
 }
 const displayDetails = (data) =>{
- console.log(data)
+ 
  const modalContainer = document.getElementById('modal-contain')
  modalContainer.innerHTML = `
  <img src="${data.thumbnail}">
@@ -68,7 +68,7 @@ const displayDetails = (data) =>{
 }
 const displayVideos = (data) =>{
 
-    console.log(data)
+   
     const VideoContainer = document.getElementById("videos")
     VideoContainer.innerHTML=""
     if(data.length ===0){
@@ -85,7 +85,7 @@ const displayVideos = (data) =>{
         VideoContainer.classList.add("grid")
     }
     data.forEach( video =>{
-        console.log(video)
+       
         const card = document.createElement("div")
         card.classList = "card card-compact "
         card.innerHTML = `
